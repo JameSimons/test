@@ -5,18 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="learn_git.css">
 </head>
 <body>
-    <!-- 这是一个git项目创建测试 -->
+    <div class="box"></div>
     <script>
         //1. 创建git仓库
         //在项目目录下，右键打开Git Bash ，执行git init 将当前目录转化为git仓库，注：是一个隐藏文件夹
+
         //2. 工作区四种状态
         // 未跟踪(untracked)   未修改(unmodified)   已修改(Modified)    已暂存(Staged)
+        //??表示新增添的为跟踪的文件    A表示新增加到暂存区的文件   红色M表示修改未暂存     绿色M表示修改已暂存
+        //两个M同时出现表示修改暂存后又被修改了
+
         //3. 检查文件状态
         //在根目录下打开Git Bash ,执行git status命令
+
         //4. 以精简方式显示文件状态
         //git status -s   两个红色??表示未跟踪文件
+
+        //5. 跟踪新文件
+        //git add 文件名   检查文件状态，当变成绿色A时表示跟踪文件成功(被跟踪文件处于暂存状态)
+
+        //6. 提交更新，暂存区的文件会被提交到git仓库中
+        //git commit -m"里面是要更新注释的文字内容"
+
+        //7. 如果对提交文件进行修改，那么就会变成moddifid,即红色M，表示已修改状态，但未暂存到git仓库中
+
+        //8. 如果想暂存已修改的文件，Git add 文件名     把已跟踪的文件放入暂存区中
+
+        //9. 撤销对文件的修改，具有危险性，慎用
+        // git checkout --文件名
+
+        //10. 暂存已修改的文件   
+        //  使用git add 文件名 命令，           该命令有三种语义：
+        //  1.可以用它来开始跟踪新文件  2.把已跟踪、且已修改的文件放到暂存区  3.把有冲突的文件标记为以解决文件
+
+        //11. 向暂存区一次性添加多个文件    git add .
+
+        //12. 从暂存区移除不想要的文件(不是删除本地文件，而是在暂存区里删除掉了，且新增到git仓库的文件会直接成未跟踪的状态，早就暂存到git里面的文件会变成未增加到暂存区的状态，但事实上已经跟踪过了)
+        // git reset HEAD 文件名
     </script>
 </body>
 </html>
